@@ -21,11 +21,3 @@ drop table if exists
   STV202404101__DWH.l_user_message,
   STV202404101__DWH.l_admins;
 
--- clean up STAGING
-drop table if exists 
-  STV202404101__STAGING.users,
-  STV202404101__STAGING.groups,
-  STV202404101__STAGING.dialogs,
-  STV202404101__STAGING.users_rej,
-  STV202404101__STAGING.groups_rej,
-  STV202404101__STAGING.dialogs_rej;

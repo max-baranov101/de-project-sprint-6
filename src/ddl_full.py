@@ -11,9 +11,10 @@ conn_info = {
 
 sql_sripts_folder = 'src/sql/'
 sql_sripts = [
-    '0_clear_db.sql',
+    #'0_clear_db.sql',
     '1_ddl_stg.sql',
-    '2_ddl_dwh.sql',
+    '2_create_group_log.sql',
+    '3_ddl_dwh.sql',
 ]
 
 for sql_sript in sql_sripts:
