@@ -1,15 +1,10 @@
 -- clean up STAGING
 drop table if exists STV202404101__STAGING.users cascade;
-
 drop table if exists STV202404101__STAGING.groups cascade;
-
 drop table if exists STV202404101__STAGING.dialogs cascade;
-
-drop table if exists STV202404101__STAGING.users_rej cascade;
-
-drop table if exists STV202404101__STAGING.groups_rej cascade;
-
-drop table if exists STV202404101__STAGING.dialogs_rej cascade;
+-- drop table if exists STV202404101__STAGING.users_rej cascade;
+-- drop table if exists STV202404101__STAGING.groups_rej cascade;
+-- drop table if exists STV202404101__STAGING.dialogs_rej cascade;
 
 -- create STAGING tables
 -- users

@@ -1,5 +1,28 @@
+-- clean up DWH
+-- Dropping hubs
+DROP TABLE IF EXISTS
+  STV202404101__DWH.h_users CASCADE,
+  STV202404101__DWH.h_dialogs CASCADE,
+  STV202404101__DWH.h_groups CASCADE;
+
+-- Dropping satellites
+DROP TABLE IF EXISTS
+  STV202404101__DWH.s_admins CASCADE,
+  STV202404101__DWH.s_user_chatinfo CASCADE,
+  STV202404101__DWH.s_group_name CASCADE,
+  STV202404101__DWH.s_group_private_status CASCADE,
+  STV202404101__DWH.s_dialog_info CASCADE,
+  STV202404101__DWH.s_user_socdem CASCADE;
+
+-- Dropping links
+DROP TABLE IF EXISTS 
+  STV202404101__DWH.l_groups_dialogs CASCADE,
+  STV202404101__DWH.l_user_message CASCADE,
+  STV202404101__DWH.l_admins CASCADE;
+
+
 -- create DWH tables
--- rejected users
+-- h_users
 create table STV202404101__DWH.h_users (
   hk_user_id bigint primary key,
   user_id int,
