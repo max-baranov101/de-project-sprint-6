@@ -26,13 +26,13 @@ with user_group_log as (
   group by
     lgd.hk_group_id
 )
-select
-  ugl.hk_group_id,
-  ugl.cnt_added_users,
-  ugm.cnt_users_in_group_with_messages,
-  ugm.cnt_users_in_group_with_messages / ugl.cnt_added_users group_conversion
-from
-  user_group_log as ugl
-  left join user_group_messages as ugm on ugl.hk_group_id = ugm.hk_group_id
-order by
-  ugm.cnt_users_in_group_with_messages / ugl.cnt_added_users desc;
+SELECT
+  ugl.hk_group_id AS hk_group_id,
+  ugl.cnt_added_users AS cnt_added_users,
+  ugm.cnt_users_in_group_with_messages AS cnt_users_in_group_with_messages,
+  ROUND(ugm.cnt_users_in_group_with_messages / ugl.cnt_added_users, 3) AS group_conversion
+FROM
+  user_group_log AS ugl
+  LEFT JOIN user_group_messages AS ugm ON ugl.hk_group_id = ugm.hk_group_id
+ORDER BY
+  group_conversion DESC;

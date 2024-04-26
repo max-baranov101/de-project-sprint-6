@@ -11,8 +11,8 @@ conn_info = {
 
 sql_sripts_folder = 'src/sql/'
 sql_sripts = [
-    '6_insert_l_user_group.sql',
-    '7_insert_s_auth_history.sql'
+    '8_CTE_user_group_log.sql',
+    '9_CTE_user_group_messages.sql'
 ]
 
 for sql_sript in sql_sripts:
@@ -21,6 +21,9 @@ for sql_sript in sql_sripts:
             with vertica_python.connect(**conn_info) as conn:
                 cur = conn.cursor()
                 cur.execute(file.read())
+                res = cur.fetchall()
+                print(res)
+                print()
         except Exception as e:
             print(f'Error in {sql_sript}: {e}')
             continue

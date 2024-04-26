@@ -11,9 +11,9 @@ conn_info = {
 
 sql_sripts_folder = 'src/sql/'
 sql_sripts = [
-    #'1_ddl_stg.sql',
+    '1_ddl_stg.sql',
     '2_create_group_log.sql',
-    #'3_ddl_dwh.sql',
+    '3_ddl_dwh.sql',
     '4_create_l_user_group_activity.sql',
     '5_create_s_auth_history.sql',
 ]
