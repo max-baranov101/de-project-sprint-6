@@ -1,4 +1,6 @@
 __pycache__/
 *.pyc
-temp
+temp/
 .DS_Store
+venv/
+plugins/
