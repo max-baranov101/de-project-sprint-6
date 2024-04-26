@@ -19,8 +19,8 @@
 1. Источник данных для БД — S3.
 2. Данные в S3 лежат в бакетах.
 3. Креды для подключения к S3
-   - AWS_ACCESS_KEY_ID = "YCAJEWXOyY8Bmyk2eJL-hlt2K"
-   - AWS_SECRET_ACCESS_KEY = "YCPs52ajb2jNXxOUsL4-pFDL1HnV2BCPd928_ZoA"
+   - `AWS_ACCESS_KEY_ID` = `YCAJEWXOyY8Bmyk2eJL-hlt2K`
+   - `AWS_SECRET_ACCESS_KEY` = `YCPs52ajb2jNXxOUsL4-pFDL1HnV2BCPd928_ZoA`
 4. Описание данных
    - `users.csv`: информация о пользователях
      - `id` — уникальный идентификатор пользователя
@@ -52,7 +52,7 @@
 ### Подготовка DDL-скриптов
 
 1. Создание таблиц STAGING ([1_ddl_stg.sql](src/sql/1_ddl_stg.sql))
-2. Расширение STAGING согласно условиям данного проекта: создание таблицы `group_log` с учётом формата данных в скачанном файле `group_log.csv`.
+2. Расширение STAGING согласно условиям данного проекта: создание таблицы `group_log` с учётом формата данных в скачанном файле `group_log.csv` ([2_create_group_log.sql](src/sql/2_create_group_log.sql))
 3. Создание таблиц DWH ([3_ddl_dwh.sql](src/sql/3_ddl_dwh.sql))
 4. Расширение DWH согласно условиям данного проекта:
    - Создание таблицы связи `l_user_group_activity` ([4_create_l_user_group_activity.sql](src/sql/4_create_l_user_group_activity.sql))
