@@ -2,5 +2,4 @@ __pycache__/
 *.pyc
 temp/
 .DS_Store
-venv/
 plugins/
