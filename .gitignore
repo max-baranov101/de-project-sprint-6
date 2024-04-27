@@ -1,5 +1,5 @@
 __pycache__/
-*.pyc
-temp/
-.DS_Store
 plugins/
+temp/
+*.pyc
+.DS_Store
